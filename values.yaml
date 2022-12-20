@@ -1,0 +1,15 @@
+
+deployment:
+  name: sample-deployment
+  replicas: 2
+  container:
+    name: sample-container
+    image: nginx:alpine
+    port: 80
+
+service:
+  name: sample-service
+  type: NodePort
+  port: 80
+  targetPort: 80
+  nodePort: 30007
